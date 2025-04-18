@@ -7,11 +7,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/my_auth_stream_access_endpoint', (req, res) => {
-    const { body: {token, amount, merchant}} = req;
+    console.log(req)
     console.log(body)
-    console.log(token)
-    console.log(amount)
-    console.log(merchant)
+    // const { body: {token, amount, merchant}} = req;
   	// Custom Approve/Decline Logic ...
     // ... ex. decline if amount is > $500 ...
     // ... ex. approve if merchant code is 'groceries'
