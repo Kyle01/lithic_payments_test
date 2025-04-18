@@ -3,12 +3,16 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+app.use(express.json());
+
 app.get('/', (req, res) => {
   res.send('Hello, Express!');
 });
 
+
 app.post('/my_auth_stream_access_endpoint', (req, res) => {
-    console.log(req)
+    console.log('yyyyyyyyy')
+    console.log(req.body)
     const token = "foo"
   	// Custom Approve/Decline Logic ...
     // ... ex. decline if amount is > $500 ...
